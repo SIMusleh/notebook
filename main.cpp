@@ -36,11 +36,20 @@ int main() {
     // validate number of pages
     std::cout << "Enter the number of pages: ";
     std::cin >> inputInt;
-    while (std::cin.fail() || inputInt <= 0) {
+    while (true) {
+        if (std::cin.fail() )
+    {
         std::cin.clear();
+
         std::cin.ignore(1000,'\n');
         std::cout << "You entered something that is not a number!\n";
         std::cout << "Please enter a number greater than 0.\n";
+     } else if (inputInt <= 0)  {
+        std::cout << "Please enter a number greater than 0.\n";
+    
+    } else {
+        break;
+     }
         std::cout << "Enter the number of pages: ";
         std::cin >> inputInt;
     }
@@ -50,29 +59,44 @@ int main() {
     //validate height
     std::cout << "Enter the notebook height: ";
     std::cin >> inputDouble;
-    while (std::cin.fail() || inputDouble <= 0) {
-        std::cin.clear();
-        std::cin.ignore(1000,'\n');
-        std::cout << "You entered something that is not a number!\n";
-        std::cout << "Please enter a number greater than 0.\n";
+    while (true) {
+        if std::cin.fail()
+    }
+    std::cin.clear();
+    std::cin.ignore(1000,'\n');
+    std::cout << "You entered something that is not a number!\n";
+    std::cout << "Please enter a number greater than 0.\n";
+    } else if 
+     (inputDouble <= 0) {
+    std::cout << "Please enter a number greater than 0.\n";  
+     } else {
+        break;
+     }  
         std::cout << "Enter the notebook height: ";
         std::cin >> inputDouble;
     }
-
     mynotebook.setHeight(inputDouble);
 
     //validate width
     std::cout << "Enter the notebook width: ";
     std::cin >> inputDouble;
-    while (std::cin.fail() || inputDouble <= 0) {
-        std::cin.clear();
-        std::cin.ignore(1000,'\n');
-        std::cout << "You entered something that is not a number!\n";
-        std::cout << "Please enter a number greater than 0.\n";
+    while (true) {
+        if std::cin.fail()
+    }
+    std::cin.clear();
+    std::cin.ignore(1000,'\n');
+    std::cout << "You entered something that is not a number!\n";
+    std::cout << "Please enter a number greater than 0.\n";
+    } else if 
+     (inputDouble <= 0) {
+    std::cout << "Please enter a number greater than 0.\n";  
+     } else {
+        break;
+     }  
         std::cout << "Enter the notebook width: ";
         std::cin >> inputDouble;
     }
-    
+
     mynotebook.setWidth(inputDouble);
 
     std::cout << "\nHere is your notebook: \n";
