@@ -1,7 +1,7 @@
-/* Program name: Notebook.h
+/* Program name: notebook.h
 * Author: Sahar Musleh
 * Date last updated: 10/31/25
-* Purpose: defines the Notebook class and the methods it uses to store notebook information.
+* Purpose: defines the notebook class and the methods it uses to store notebook information.
 */
 
 #ifndef NOTEBOOK_H
@@ -9,7 +9,7 @@
 
 #include <string>
 
-class Notebook {
+class notebook {
     private:
         double width;
         double height;
