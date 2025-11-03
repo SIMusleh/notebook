@@ -21,6 +21,7 @@ class notebook {
         std::string coverDesign;
 
     public:
+        notebook(double w, double h, int p, std::string pt, std::string f, std::string pc, std::string ct, std::string cd);
         void setWidth(double w);
         void setHeight(double h);
         void setNumPages(int n);
