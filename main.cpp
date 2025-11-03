@@ -58,11 +58,21 @@ int main() {
         std::cout << "Enter the notebook height: ";
         std::cin >> inputDouble;
     }
-    
+
     mynotebook.setHeight(inputDouble);
 
+    //validate width
     std::cout << "Enter the notebook width: ";
     std::cin >> inputDouble;
+    while (std::cin.fail() || inputDouble <= 0) {
+        std::cin.clear();
+        std::cin.ignore(1000,'\n');
+        std::cout << "You entered something that is not a number!\n";
+        std::cout << "Please enter a number greater than 0.\n";
+        std::cout << "Enter the notebook width: ";
+        std::cin >> inputDouble;
+    }
+    
     mynotebook.setWidth(inputDouble);
 
     std::cout << "\nHere is your notebook: \n";
