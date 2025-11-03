@@ -8,10 +8,9 @@
 #include "notebook.h"
 
 int main() {
-    notebook mynotebook;
-    std::string inputstr;
-    int inputInt;
-    double inputDouble;
+    std::string coverDesign, coverType, paperColor, format, paperType;
+    int numPages;
+    double height, width;
 
     std::cout << "Enter the name of the cover color or design: ";
     std::getline(std::cin, inputstr);
@@ -49,7 +48,6 @@ int main() {
         }
         std::cout << "Enter the number of pages: ";
     }
-    mynotebook.setNumPages(inputInt);
 
     // Validate height
     std::cout << "Enter the notebook height: ";
@@ -67,7 +65,7 @@ int main() {
         }
         std::cout << "Enter the notebook height: ";
     }
-    mynotebook.setHeight(inputDouble);
+    
 
     // Validate width
     std::cout << "Enter the notebook width: ";
@@ -84,8 +82,8 @@ int main() {
             break;
         }
         std::cout << "Enter the notebook width: ";
-    }
-    mynotebook.setWidth(inputDouble);
+    }  
+    notebook mynotebook(width, height, numPages, paperType, format, paperColor, coverType, coverDesign);
 
     std::cout << "\nHere is your notebook: \n";
     std::cout << mynotebook.toString() << std::endl;
