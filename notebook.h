@@ -37,7 +37,6 @@ class notebook {
             std::string getFormat() const;
             std::string getPaperColor() const;
             std::string getCoverDesign() const;
-            std::string getCoverDesign() const;
 
             std::string toString() const;
 
