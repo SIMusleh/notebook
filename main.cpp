@@ -33,8 +33,18 @@ int main() {
     std::getline(std::cin,inputstr);
     mynotebook.setPaperType(inputstr);
 
+    // validate number of pages
     std::cout << "Enter the number of pages: ";
     std::cin >> inputInt;
+    while (std::cin.fail() || inputInt <= 0) {
+        std::cin.clear();
+        std::cin.ignore(1000,'\n');
+        std::cout << "You entered something that is not a number!\n";
+        std::cout << "Please enter a number greater than 0.\n";
+        std::cout << "Enter the number of pages: ";
+        std::cin >> inputInt;
+    }
+
     mynotebook.setNumPages(inputInt);
 
     std::cout << "Enter the notebook height: ";
