@@ -47,8 +47,18 @@ int main() {
 
     mynotebook.setNumPages(inputInt);
 
+    //validate height
     std::cout << "Enter the notebook height: ";
     std::cin >> inputDouble;
+    while (std::cin.fail() || inputDouble <= 0) {
+        std::cin.clear();
+        std::cin.ignore(1000,'\n');
+        std::cout << "You entered something that is not a number!\n";
+        std::cout << "Please enter a number greater than 0.\n";
+        std::cout << "Enter the notebook height: ";
+        std::cin >> inputDouble;
+    }
+    
     mynotebook.setHeight(inputDouble);
 
     std::cout << "Enter the notebook width: ";
