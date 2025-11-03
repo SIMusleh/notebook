@@ -36,6 +36,7 @@ class notebook {
             std::string getPaperType() const;
             std::string getFormat() const;
             std::string getPaperColor() const;
+            std::string getCoverType() const;
             std::string getCoverDesign() const;
 
             std::string toString() const;
