@@ -13,35 +13,30 @@ int main() {
     double height, width;
 
     std::cout << "Enter the name of the cover color or design: ";
-    std::getline(std::cin, inputstr);
-    mynotebook.setCoverDesign(inputstr);
+    std::getline(std::cin, coverDesign);
 
     std::cout << "Enter the cover type: ";
-    std::getline(std::cin, inputstr);
-    mynotebook.setCoverType(inputstr);
+    std::getline(std::cin, coverType);
 
     std::cout << "Enter the paper color: ";
-    std::getline(std::cin, inputstr);
-    mynotebook.setPaperColor(inputstr);
+    std::getline(std::cin, paperColor);
 
     std::cout << "Enter the notebook format: ";
-    std::getline(std::cin, inputstr);
-    mynotebook.setFormat(inputstr);
+    std::getline(std::cin, format);
 
     std::cout << "Enter the type of paper: ";
-    std::getline(std::cin, inputstr);
-    mynotebook.setPaperType(inputstr);
+    std::getline(std::cin, paperType);
 
     // Validate number of pages
     std::cout << "Enter the number of pages: ";
     while (true) {
-        std::cin >> inputInt;
+        std::cin >> numPages;
         if (std::cin.fail()) {
             std::cin.clear();
             std::cin.ignore(1000, '\n');
             std::cout << "You entered something that is not a number!\n";
             std::cout << "Please enter a number greater than 0.\n";
-        } else if (inputInt <= 0) {
+        } else if (numPages <= 0) {
             std::cout << "Please enter a number greater than 0.\n";
         } else {
             break;
@@ -52,37 +47,38 @@ int main() {
     // Validate height
     std::cout << "Enter the notebook height: ";
     while (true) {
-        std::cin >> inputDouble;
+        std::cin >> height;
         if (std::cin.fail()) {
             std::cin.clear();
             std::cin.ignore(1000, '\n');
             std::cout << "You entered something that is not a number!\n";
             std::cout << "Please enter a number greater than 0.\n";
-        } else if (inputDouble <= 0) {
+        } else if (height <= 0) {
             std::cout << "Please enter a number greater than 0.\n";
         } else {
             break;
         }
         std::cout << "Enter the notebook height: ";
     }
-    
 
     // Validate width
     std::cout << "Enter the notebook width: ";
     while (true) {
-        std::cin >> inputDouble;
+        std::cin >> width;
         if (std::cin.fail()) {
             std::cin.clear();
             std::cin.ignore(1000, '\n');
             std::cout << "You entered something that is not a number!\n";
             std::cout << "Please enter a number greater than 0.\n";
-        } else if (inputDouble <= 0) {
+        } else if (width <= 0) {
             std::cout << "Please enter a number greater than 0.\n";
         } else {
             break;
         }
         std::cout << "Enter the notebook width: ";
-    }  
+    }
+
+    // Create notebook using the constructor
     notebook mynotebook(width, height, numPages, paperType, format, paperColor, coverType, coverDesign);
 
     std::cout << "\nHere is your notebook: \n";
