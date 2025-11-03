@@ -6,6 +6,18 @@
 
 #include "notebook.h"
 
+//constructor definition
+notebook::notebook(double w, double h, int p, std::string pt, std::string f, std::string pc, std::string ct, std::string cd) {
+    width = w;
+    height = h;
+    numPages = p; 
+    paperType = pt;
+    format = f;
+    paperColor = pc;
+    coverType = ct;
+    coverDesign = cd;
+}
+
 
 void notebook::setWidth(double w) { width = w; }
 void notebook::setHeight(double h) { height = h; }
