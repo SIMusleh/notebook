@@ -1,6 +1,6 @@
 /* Program name: notebook.h
 * Author: Sahar Musleh
-* Date last updated: 10/31/25
+* Date last updated: 11/02/25
 * Purpose: defines the notebook class and the methods it uses to store notebook information.
 */
 

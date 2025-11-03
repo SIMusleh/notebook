@@ -1,6 +1,6 @@
 /* Program name: notebook.cpp
 * Author: Sahar Musleh
-* Date last updated: 10/31/25
+* Date last updated: 11/02/25
 * Purpose: builds the notebook and defines what each function does.
 */
 
