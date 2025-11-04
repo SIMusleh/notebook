@@ -13,7 +13,7 @@ class notebook {
     private:
         double width; // width of the notebook
         double height; // height of the notebook
-        int numPages; // number of pages in the notebook
+        int Pages; // number of pages in the notebook
         std::string paperType; // type of paper used
         std::string format; // format of the notebook pages
         std::string paperColor; // color of the paper
