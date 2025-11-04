@@ -24,7 +24,7 @@ class notebook {
         notebook(double w, double h, int p, std::string pt, std::string f, std::string pc, std::string ct, std::string cd);
         void setWidth(double w);
         void setHeight(double h);
-        void setNumPages(int n);
+        void setPages(int n);
         void setPaperType(std::string pt);
         void setFormat(std::string f);
         void setPaperColor(std::string pc);
@@ -33,7 +33,7 @@ class notebook {
 
             double getWidth() const;
             double getHeight() const;
-            int getNumPages() const;
+            int getPages() const;
             std::string getPaperType() const;
             std::string getFormat() const;
             std::string getPaperColor() const;
