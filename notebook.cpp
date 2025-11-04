@@ -32,6 +32,7 @@ void notebook::setCoverDesign(std::string cd) { coverDesign = cd; }
 double notebook::getWidth() const { return width; }
 double notebook::getHeight() const { return height; }
 int notebook::getPages() const { return numPages; }
+std::string notebook::getPaperType() const { return paperType; }
 std::string notebook::getFormat() const { return format; }
 std::string notebook::getPaperColor() const { return paperColor; }
 std::string notebook::getCoverType() const { return coverType; }
