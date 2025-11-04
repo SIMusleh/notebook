@@ -21,7 +21,7 @@ notebook::notebook(double w, double h, int p, std::string pt, std::string f, std
 
 void notebook::setWidth(double w) { width = w; }
 void notebook::setHeight(double h) { height = h; }
-void notebook::setNumPages(int n) { numPages = n; }
+void notebook::setPages(int n) { numPages = n; }
 void notebook::setPaperType(std::string pt) { paperType = pt; }
 void notebook::setFormat(std::string f) { format = f; }
 void notebook::setPaperColor(std::string pc) { paperColor = pc; }
@@ -31,7 +31,7 @@ void notebook::setCoverDesign(std::string cd) { coverDesign = cd; }
 
 double notebook::getWidth() const { return width; }
 double notebook::getHeight() const { return height; }
-int notebook::getNumPages() const { return numPages; }
+int notebook::getPages() const { return numPages; }
 std::string notebook::getFormat() const { return format; }
 std::string notebook::getPaperColor() const { return paperColor; }
 std::string notebook::getCoverType() const { return coverType; }
